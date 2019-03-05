@@ -210,5 +210,55 @@ namespace CodingChallenge.Data.Test
             //Assert
             Assert.AreEqual("<h1>Report Forms</h1>1 Square | Perimeter: 8 | Area: 4 |<br/>1 Circle | Perimeter: 12,57 | Area: 12,57 |<br/>1 Rectangle | Perimeter: 8 | Area: 4 |<br/>1 Triangle | Perimeter: 6 | Area: 1,73 |<br/>1 Trapeze | Perimeter: 10 | Area: 20 |<br/>TOTAL :<br/>5 Forms Perimeter: 44,57 Area: 42,3", resumen);
         }
+
+        [TestCase]
+        public void TestObtenerCodigoIdiomaIngles()
+        {
+            //Act
+            string codigoDeIdioma = FormaGeometrica.ObtenerCodigoIdioma(Idioma.Ingles);
+
+            //Assert
+            Assert.AreEqual("en", codigoDeIdioma);
+        }
+
+        [TestCase]
+        public void TestObtenerCodigoIdiomaItaliano()
+        {
+            //Act
+            string codigoDeIdioma = FormaGeometrica.ObtenerCodigoIdioma(Idioma.Italiano);
+
+            //Assert
+            Assert.AreEqual("it", codigoDeIdioma);
+        }
+
+        [TestCase]
+        public void TestObtenerCodigoIdiomaFrances()
+        {
+            //Act
+            string codigoDeIdioma = FormaGeometrica.ObtenerCodigoIdioma(Idioma.Frances);
+
+            //Assert
+            Assert.AreEqual("fr", codigoDeIdioma);
+        }
+
+        [TestCase]
+        public void TestObtenerCodigoIdiomaPortugues()
+        {
+            //Act
+            string codigoDeIdioma = FormaGeometrica.ObtenerCodigoIdioma(Idioma.Portugues);
+
+            //Assert
+            Assert.AreEqual("pt", codigoDeIdioma);
+        }
+
+        [TestCase]
+        public void TestObtenerCodigoIdiomaEspaniol()
+        {
+            //Act
+            string codigoDeIdioma = FormaGeometrica.ObtenerCodigoIdioma(Idioma.SinTraducir);
+
+            //Assert
+            Assert.AreEqual("es", codigoDeIdioma);
+        }
     }
 }
